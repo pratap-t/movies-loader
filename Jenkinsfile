@@ -9,7 +9,9 @@ node('built-in'){
     stage('Unit Tests'){
         def imageTest= docker.build("${imageName}-test", "-f Dockerfile.test .")
         sh "docker run --rm -v $PWD/reports:/app/reports ${imageName}-test"
-        junit "$PWD/reports/test-results.xml"
+        sh "ls -ltr $PWD/reports"
+        sh "cat $PWD/reports/test-results.xml"
+        // junit "$PWD/reports/test-results.xml"
     }
 
     stage('Build'){
