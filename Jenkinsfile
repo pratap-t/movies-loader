@@ -1,5 +1,5 @@
 def imageName = 'tripuraripratap/movies-loader'
-def registry = 'https://hub.docker.com'
+def registry = 'https://index.docker.io/v1/'
 
 node('built-in'){
     stage('Checkout'){
