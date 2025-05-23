@@ -1,5 +1,5 @@
-def imageName = 'mlabouardy/movies-loader'
-def registry = 'https://registry.slowcoder.com'
+def imageName = 'tripuraripratap/movies-loader'
+def registry = 'https://hub.docker.com'
 
 node('built-in'){
     stage('Checkout'){
