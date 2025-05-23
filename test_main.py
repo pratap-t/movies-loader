@@ -1,6 +1,6 @@
 import unittest
 import json
-
+from xmlrunner import XMLTestRunner 
 
 class TestJSONLoaderMethods(unittest.TestCase):
     movies = []
@@ -20,4 +20,7 @@ class TestJSONLoaderMethods(unittest.TestCase):
         self.assertEqual(self.movies[0]['id'], 'tt0111161')
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+    # Run the tests and generate an XML report
+    with open('app/test-results.xml', 'wb') as output:
+        unittest.main(testRunner=XMLTestRunner(output=output), failfast=False, buffer=False, catchbreak=False)

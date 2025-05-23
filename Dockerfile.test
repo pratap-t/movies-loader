@@ -7,7 +7,7 @@ RUN pip install --upgrade pip && pip install unittest-xml-reporting
 COPY test_main.py .
 COPY movies.json .
 
-# CMD python test_main.py
+CMD python test_main.py
 
 # Command to run tests and output XML report
-CMD ["python3", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "--", "--output-file", "/app/reports/test-results.xml"]
+# CMD ["python3", "-m", "unittest", "discover", "-s", ".", "-p", "test_*.py", "--", "--output-file", "/app/reports/test-results.xml"]
