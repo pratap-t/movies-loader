@@ -22,5 +22,5 @@ class TestJSONLoaderMethods(unittest.TestCase):
 if __name__ == '__main__':
     # unittest.main()
     # Run the tests and generate an XML report
-    with open('app/test-results.xml', 'wb') as output:
+    with open('/app/reports/test-results.xml', 'wb') as output:
         unittest.main(testRunner=XMLTestRunner(output=output), failfast=False, buffer=False, catchbreak=False)
