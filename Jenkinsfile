@@ -19,7 +19,7 @@ node('built-in'){
     }
 
     stage('Push'){
-        docker.withRegistry(registry, 'registry') {
+        docker.withRegistry(registry, 'docker-credentials') {
             docker.image(imageName).push(commitID())
 
             if (env.BRANCH_NAME == 'develop') {
